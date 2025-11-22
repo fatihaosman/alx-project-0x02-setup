@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 
 const HomePage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,6 +16,9 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="p-6 space-y-4">
+
+            <Header />
+
       <h1 className="text-2xl font-bold">Welcome to the Home Page</h1>
 
       {/* Button to open modal */}

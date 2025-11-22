@@ -1,9 +1,11 @@
 import React from "react";
 // pages/about.tsx
 import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 const About: React.FC = () => {
   return (
     <div className="p-6">
+          <Header />
       <h1 className="text-2xl font-bold">About Page</h1>
       <p>This page contains information about our project.</p>
 
