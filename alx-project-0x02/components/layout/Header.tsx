@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
@@ -12,9 +13,13 @@ const Header: React.FC = () => {
             aria-label="search"
           />
           <nav className="flex gap-2">
-            <button className="px-3 py-1 rounded hover:bg-gray-100">Rooms</button>
-            <button className="px-3 py-1 rounded hover:bg-gray-100">Mansion</button>
-            <button className="px-3 py-1 rounded hover:bg-gray-100">Countryside</button>
+            <Link href="/home" className="px-3 py-1 rounded hover:bg-gray-100">
+              Home
+            </Link>
+
+            <Link href="/about" className="px-3 py-1 rounded hover:bg-gray-100">
+              About
+            </Link>
           </nav>
         </div>
       </div>
@@ -23,4 +28,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
