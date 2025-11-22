@@ -38,3 +38,12 @@ export interface ButtonProps {
 }
 
 
+// interfaces/index.ts
+export interface PostProps {
+   id: number;  
+  userId: number;
+  title: string;
+  body: string; // JSONPlaceholder returns `body` instead of content
+}
+
+
