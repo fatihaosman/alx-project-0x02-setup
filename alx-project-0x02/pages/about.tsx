@@ -1,6 +1,6 @@
 import React from "react";
 // pages/about.tsx
-import Button from "../components/common/Button";
+import Button from "@/components/common/Button";
 const About: React.FC = () => {
   return (
     <div className="p-6">
