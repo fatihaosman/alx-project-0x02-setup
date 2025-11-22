@@ -35,7 +35,8 @@
 
 
 import React from "react";
-import Link from "next/link";
+import Link from "next/link"; 
+// import PostsPage from "@/pages/posts";
 
 const Header: React.FC = () => {
   return (
