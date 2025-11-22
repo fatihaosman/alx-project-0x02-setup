@@ -20,3 +20,13 @@ export interface PropertyProps {
   image: string;
   discount: string;
 }
+
+
+
+// interfaces/index.ts
+
+export interface CardProps {
+  title: string;
+  content: string;
+}
+
