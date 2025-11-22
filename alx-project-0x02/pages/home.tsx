@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "@/components/common/Card";
-import PostModal from "@/components/common/PostModal ";
+import PostModal from "@/components/common/PostModal";
 
 const HomePage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
