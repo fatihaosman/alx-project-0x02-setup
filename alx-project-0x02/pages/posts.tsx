@@ -18,43 +18,41 @@ import Header from "@/components/layout/Header";
 import Postcard from "@/components/common/Postcard";
 import { PostProps } from "@/interfaces";
 
-const PostsPage: React.FC = () => {
-  const [posts, setPosts] = useState<PostProps[]>([]);
-  const [loading, setLoading] = useState(true);
+interface PostsPageProps {
+  posts: PostProps[];
+}
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
-      .then((res) => res.json())
-      .then((data: PostProps[]) => {
-        setPosts(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching posts:", err);
-        setLoading(false);
-      });
-  }, []);
+const PostsPage: React.FC<PostsPageProps> = ({ posts }) => {
+  // const [posts, setPosts] = useState<PostProps[]>([]);
+  // const [loading, setLoading] = useState(true);
 
-  return (
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
+  //     .then((res) => res.json())
+  //     .then((data: PostProps[]) => {
+  //       setPosts(data);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error("Error fetching posts:", err);
+  //       setLoading(false);
+  //     });
+  // }, []);
+
+ return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-
       <div className="p-6 space-y-4">
         <h1 className="text-2xl font-bold">Posts</h1>
-
-        {loading ? (
-          <p>Loading posts...</p>
-        ) : (
-          posts.map((post) => (
-            <Postcard
-              key={post.id}
-              id={post.id} 
-              userId={post.userId}
-              title={post.title}
-              body={post.body}
-            />
-          ))
-        )}
+        {posts.map((post) => (
+          <Postcard
+            key={post.id}
+            id={post.id}
+            userId={post.userId}
+            title={post.title}
+            body={post.body}
+          />
+        ))}
       </div>
     </div>
   );
@@ -62,6 +60,18 @@ const PostsPage: React.FC = () => {
 
 export default PostsPage;
 
+
+// Next.js static data fetching
+export const getStaticProps = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
+  const posts: PostProps[] = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
 
 // What this does
 
