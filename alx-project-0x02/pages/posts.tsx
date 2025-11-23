@@ -15,7 +15,7 @@
 
 import React, { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
-import Postcard from "@/components/common/Postcard";
+import PostCard from "@/components/common/Postcard";
 import { PostProps } from "@/interfaces";
 
 interface PostsPageProps {
@@ -45,7 +45,7 @@ const PostsPage: React.FC<PostsPageProps> = ({ posts }) => {
       <div className="p-6 space-y-4">
         <h1 className="text-2xl font-bold">Posts</h1>
         {posts.map((post) => (
-          <Postcard
+          <PostCard
             key={post.id}
             id={post.id}
             userId={post.userId}
