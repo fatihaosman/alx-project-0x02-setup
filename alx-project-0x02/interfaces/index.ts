@@ -1,3 +1,5 @@
+import { EphemeralKeyInfo } from "tls";
+
 export interface Address {
   state: string;
   city: string;
@@ -46,6 +48,12 @@ export interface PostProps {
   body: string; // JSONPlaceholder returns `body` instead of content
 } 
 
-
-
-
+export interface UserProps {
+  id: number;
+  name: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+  };
+}

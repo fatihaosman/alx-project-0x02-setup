@@ -1,7 +1,7 @@
 import React from "react";
 import { UserProps } from "@/interfaces";
 
-const UserCard: React.FC<UserProps> = ({ name, email, address }) => {
+const UserCard: React.FC<UserProps> = ({ id, name, email, address }) => {
   return (
     <div className="bg-white border p-4 rounded-lg shadow-sm">
       <h2 className="text-xl font-semibold">{name}</h2>
@@ -12,6 +12,8 @@ const UserCard: React.FC<UserProps> = ({ name, email, address }) => {
           {address.street}, {address.city}
         </p>
       </div>
+
+       <p className="text-xs text-gray-400">User ID: {id}</p>
     </div>
   );
 };
