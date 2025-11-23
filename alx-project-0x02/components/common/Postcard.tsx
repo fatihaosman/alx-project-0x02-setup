@@ -1,7 +1,7 @@
 import React from "react";
 import { type PostProps } from "@/interfaces";
 
-const Postcard: React.FC<PostProps> = ({id, userId, title, body }) => {
+const PostCard: React.FC<PostProps> = ({id, userId, title, body }) => {
   return (
     <div className="border rounded-lg p-4 shadow-sm bg-white">
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
@@ -12,4 +12,4 @@ const Postcard: React.FC<PostProps> = ({id, userId, title, body }) => {
   );
 };
 
-export default Postcard;
+export default PostCard;
