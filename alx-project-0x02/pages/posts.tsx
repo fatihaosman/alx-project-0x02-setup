@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React  from "react";
 import Header from "@/components/layout/Header";
 import PostCard from "@/components/common/PostCard"; // Import the PostCard component from "\components\common\PostCard.tsx"
 import { PostProps } from "@/interfaces";
