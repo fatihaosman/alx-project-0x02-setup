@@ -1,21 +1,7 @@
-// import React from "react";
-// import Header from "@/components/layout/Header";
-
-// const PostsPage: React.FC = () => {
-//   return (
-//     <div>
-//       <Header />
-//       <h1 className="p-6 text-2xl font-bold">Posts Page</h1>
-//     </div>
-//   );
-// };
-
-// export default PostsPage;
-
 
 import React, { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
-import PostCard from "@/components/common/Postcard";
+import PostCard from "@/components/common/PostCard"; // Import the PostCard component from "\components\common\PostCard.tsx"
 import { PostProps } from "@/interfaces";
 
 interface PostsPageProps {
@@ -82,3 +68,21 @@ export const getStaticProps = async () => {
 // Shows User ID, title, and body
 
 // Includes Header for navigation
+
+
+
+
+
+// import React from "react";
+// import Header from "@/components/layout/Header";
+
+// const PostsPage: React.FC = () => {
+//   return (
+//     <div>
+//       <Header />
+//       <h1 className="p-6 text-2xl font-bold">Posts Page</h1>
+//     </div>
+//   );
+// };
+
+// export default PostsPage;
